@@ -2,4 +2,5 @@
 pwd
 date
 ls -al
+$USER
 
