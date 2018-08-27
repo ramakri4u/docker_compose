@@ -1,0 +1,13 @@
+---
+version: '3'
+services:
+ intelliq-mysql:
+  image: mysql:5
+  environment:
+   MYSQL_ROOT_PASSWORD: intelliq
+ intelliq-wp:
+  image: wordpress
+  ports:
+   - 8080:80
+
+...

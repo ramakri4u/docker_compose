@@ -1,0 +1,21 @@
+---
+version: '3'
+services:
+ jenkins:
+  image: jenkins
+  ports:
+   - 6666:8080
+ qaserver:
+  image: tomcat
+  ports:
+   - 7777:8080
+  links:
+   - jenkins
+ prodserver:
+  image: tomcat
+  ports:
+   - 8888:8080
+  links:
+   - jenkins
+...
+
